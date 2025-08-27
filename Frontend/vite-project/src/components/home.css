@@ -1,0 +1,357 @@
+.nav-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #ffb3a0, #feb47b);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    &:hover {
+        background: linear-gradient(to right, #feb47b, #ff7e5f);
+    }
+    &:focus {
+        outline: none;
+    }
+    &:active {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+
+}
+.buttons-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.entry-text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff1e7;
+    margin: 1rem auto;
+    width: 75%;
+    border-radius: 5px;
+    
+    
+}
+.text-area {
+    width: 90%;
+    height: 180px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size:14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    resize: vertical;
+    
+}
+.text-btn {
+    padding: 15px 30px;
+    border: none;
+    background: linear-gradient(to right, #ffb3a0, #feb47b);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    &:hover {
+        background: linear-gradient(to right, #feb47b, #ff7e5f);
+    }
+    &:focus {
+        outline: none;
+    }
+    &:active {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+}
+.text-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.text-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.analysis-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff1e7;
+    width: 50%;
+    margin: 1rem auto;
+}
+
+.summary-container{
+    border:1px solid #ccc;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background:linear-gradient(to right, #ffb3a0, #feb47b);
+}
+.outer-container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .entry-text-container {
+        width: 85%;
+    }
+    
+    .analysis-container {
+        width: 85%;
+    }
+    
+    .nav-btn {
+        padding: 6px 16px;
+        font-size: 13px;
+    }
+    
+    .buttons-container {
+        gap: 0.8rem;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    header p {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+    
+    .buttons-container {
+        flex-direction: row;
+        gap: 0.5rem;
+        margin-top: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 0.5rem;
+    }
+    
+    .nav-btn {
+        flex: 1;
+        min-width: 120px;
+        max-width: 140px;
+        padding: 8px 12px;
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    .entry-text-container {
+        width: 95%;
+        margin: 0.5rem auto;
+        padding: 0.8rem;
+    }
+    
+    .entry-text-container h2 {
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .entry-text-container p {
+        font-size: 0.9rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .text-area {
+        width: 95%;
+        height: 150px;
+        font-size: 13px;
+    }
+    
+    .text-btn {
+        padding: 12px 24px;
+        font-size: 13px;
+    }
+    
+    .analysis-container {
+        width: 95%;
+        margin: 0.5rem auto;
+        padding: 0.8rem;
+    }
+    
+    .analysis-container h1 {
+        font-size: 1.5rem;
+    }
+    
+    .outer-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .summary-container {
+        width: 100%;
+        margin: 0.5rem 0;
+        padding: 0.8rem;
+    }
+    
+    .summary-container h1 {
+        font-size: 1.3rem;
+    }
+    
+    .summary-container h3 {
+        font-size: 1.1rem;
+    }
+    
+    .summary-container p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    header p {
+        font-size: 0.8rem;
+        padding: 0 0.5rem;
+    }
+    
+    .buttons-container {
+        gap: 0.3rem;
+        padding: 0 0.3rem;
+    }
+    
+    .nav-btn {
+        flex: 1;
+        min-width: 100px;
+        max-width: 110px;
+        padding: 6px 8px;
+        font-size: 11px;
+        text-align: center;
+    }
+    
+    .entry-text-container {
+        width: 98%;
+        padding: 0.5rem;
+    }
+    
+    .entry-text-container h2 {
+        font-size: 1.1rem;
+    }
+    
+    .entry-text-container p {
+        font-size: 0.8rem;
+    }
+    
+    .text-area {
+        width: 98%;
+        height: 130px;
+        font-size: 12px;
+        padding: 8px;
+    }
+    
+    .text-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    
+    .text-btn-container {
+        padding-right: 0.5rem;
+    }
+    
+    .analysis-container {
+        width: 98%;
+        padding: 0.5rem;
+    }
+    
+    .analysis-container h1 {
+        font-size: 1.3rem;
+    }
+    
+    .summary-container {
+        padding: 0.6rem;
+        width: 95%;
+    }
+    
+    .summary-container h1 {
+        font-size: 1.1rem;
+    }
+    
+    .summary-container h3 {
+        font-size: 1rem;
+    }
+    
+    .summary-container p {
+        font-size: 0.8rem;
+    }
+    
+    .summary-container ul {
+        padding-left: 1rem;
+    }
+    
+    .summary-container li {
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+    
+     .buttons-container {
+        gap: 0.2rem;
+        padding: 0 0.2rem;
+    }
+    
+    .nav-btn {
+        flex: 1;
+        min-width: 70px;
+        max-width: 75px;
+        padding: 5px 4px;
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    .entry-text-container h2 {
+        font-size: 1rem;
+    }
+    
+    .text-area {
+        height: 120px;
+        font-size: 11px;
+    }
+    
+    .analysis-container h1 {
+        font-size: 1.2rem;
+    }
+    
+    .summary-container h1 {
+        font-size: 1rem;
+    }
+    
+    .summary-container h3 {
+        font-size: 0.9rem;
+    }
+}
+
+

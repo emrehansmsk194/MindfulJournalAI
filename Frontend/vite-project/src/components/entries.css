@@ -1,0 +1,458 @@
+.diary-book {
+  background: #f9f7f1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 
+    0 4px 8px rgba(0,0,0,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+  margin: 10px auto;
+  padding: 0;
+  max-width: 600px;
+}
+
+.diary-page {
+  background-image:
+    linear-gradient(90deg, #ec8721e3 30px, transparent 30px), 
+    repeating-linear-gradient(
+      transparent,
+      transparent 18px, 
+      #cce7ff 18px,
+      #cce7ff 20px 
+    );
+  background-size: 100% 100%, 100% 20px;
+  background-color: #FFF8DC;
+  padding: 20px 30px 20px 40px;;
+  font-family: 'Kalam', cursive; 
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 22px;
+  min-height: 200px;
+}
+
+.diary-entry {
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.diary-date {
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.diary-content {
+  text-align: justify;
+  word-spacing: 1px;
+}
+
+
+.time-filter {
+  
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:10px;
+}
+
+.filter-btn {
+  background: #f0f0f0;
+  border: 2px solid #ddd;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Kalam', cursive;
+  transition: all 0.3s;
+}
+.filter-btn:hover {
+  background: #e0e0e0;
+}
+
+.filter-btn.active {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  border-color: #ff7e5f;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  font-style: italic;
+}
+
+.analysis-btn-container {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.analysis-btn {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  border-radius: 12px;
+  max-width: 600px;
+  max-height: 100vh;
+  width: 90%;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  z-index: 1001;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+.delete-btn {
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}
+
+
+.analysis-modal {
+  padding: 30px;
+}
+
+.analysis-modal h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.analysis-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.analysis-section {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.analysis-section h3 {
+  margin: 0 0 10px 0;
+  color: #495057;
+}
+
+.analysis-section p {
+  margin: 0;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .diary-book {
+    width: 95%;
+    max-width: 100%;
+  }
+  
+  .modal-content {
+    width: 95%;
+  }
+  
+  .time-filter {
+    padding: 10px;
+    gap: 8px;
+  }
+  
+  .filter-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 14px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+    margin: 0.8rem 0;
+  }
+  
+  .diary-book {
+    width: 98%;
+    margin: 8px auto;
+  }
+  
+  .diary-page {
+    padding: 15px 20px 15px 25px;
+    font-size: 13px;
+    line-height: 18px;
+    padding-top: 20px;
+    background-image:
+      linear-gradient(90deg, #ec8721e3 20px, transparent 20px), 
+      repeating-linear-gradient(
+        transparent,
+        transparent 16px, 
+        #cce7ff 16px,
+        #cce7ff 18px 
+      );
+    background-size: 100% 100%, 100% 18px;
+  }
+  
+  .diary-entry {
+    margin-bottom: 30px;
+  }
+  
+  .diary-date {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  
+  .diary-content {
+    font-size: 13px;
+  }
+  
+  .time-filter {
+    padding: 8px;
+    gap: 6px;
+    margin-bottom: 15px;
+  }
+  
+  .filter-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 12px;
+    border-radius: 15px;
+  }
+  
+  .analysis-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .modal-overlay {
+    padding: 10px;
+  }
+  
+  .modal-content {
+    width: 98%;
+    max-height: 95vh;
+    border-radius: 8px;
+  }
+  
+  .close-btn {
+    font-size: 20px;
+    top: 10px;
+    right: 15px;
+  }
+  
+  .analysis-modal {
+    padding: 20px;
+  }
+  
+  .analysis-modal h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .analysis-content {
+    padding: 0 20px 20px 20px;
+    gap: 0.8rem;
+  }
+  
+  .analysis-section {
+    padding: 12px;
+  }
+  
+  .analysis-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .analysis-section p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .no-results {
+    padding: 30px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  .diary-page {
+    padding: 12px 15px 12px 20px;
+    font-size: 12px;
+    line-height: 16px;
+    padding-top: 18px;
+    background-image:
+      linear-gradient(90deg, #ec8721e3 15px, transparent 15px), 
+      repeating-linear-gradient(
+        transparent,
+        transparent 14px, 
+        #cce7ff 14px,
+        #cce7ff 16px 
+      );
+    background-size: 100% 100%, 100% 16px;
+  }
+  
+  .diary-date {
+    font-size: 12px;
+  }
+  
+  .diary-content {
+    font-size: 12px;
+  }
+  
+  .time-filter {
+    padding: 5px;
+    gap: 4px;
+  }
+  
+  .filter-btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 11px;
+    border-radius: 12px;
+  }
+  
+  .analysis-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .modal-content {
+    width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .close-btn {
+    font-size: 18px;
+    top: 8px;
+    right: 12px;
+  }
+  
+  .analysis-modal {
+    padding: 15px;
+  }
+  
+  .analysis-modal h1 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  .analysis-content {
+    padding: 0 15px 15px 15px;
+    gap: 0.6rem;
+  }
+  
+  .analysis-section {
+    padding: 10px;
+    border-left-width: 3px;
+  }
+  
+  .analysis-section h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  
+  .analysis-section p {
+    font-size: 13px;
+  }
+  
+  .no-results {
+    padding: 20px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+  
+  .diary-page {
+    padding: 10px 12px 10px 18px;
+    font-size: 11px;
+    line-height: 14px;
+    padding-top: 16px;
+  }
+  
+  .diary-date {
+    font-size: 11px;
+  }
+  
+  .diary-content {
+    font-size: 11px;
+  }
+  
+  .filter-btn {
+    padding: 0.2rem 0.4rem;
+    font-size: 10px;
+  }
+  
+  .analysis-btn {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+  
+  .analysis-modal h1 {
+    font-size: 1.2rem;
+  }
+  
+  .analysis-section h3 {
+    font-size: 0.9rem;
+  }
+  
+  .analysis-section p {
+    font-size: 12px;
+  }
+}

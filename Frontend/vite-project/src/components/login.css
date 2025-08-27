@@ -1,0 +1,274 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login-container {
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%;
+    backdrop-filter: blur(10px);
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+
+}
+
+.input-field {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgb(252, 239, 239);
+    margin: 5px 0;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+.label-field {
+    font-weight: medium;
+    font-size: var(--text-sm)
+}
+
+.btn {
+    width: 100%;
+    padding:10px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    cursor: pointer;
+    font-size: var(--text-sm);
+    transition: background-color 0.3s ease;
+    font-weight: medium;
+    &:hover {
+        background-color: darken(#4CAF50, 10%);
+    }
+    
+}
+.form-group {
+    margin-top: 1.5rem;
+}
+
+
+/* Header styles */
+h2 {
+    font-size: 1.8rem;
+    margin: 0;
+    text-align: center;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0.8rem;
+    }
+    
+    .login-container {
+        width: clamp(200px, 85%, 450px);
+        padding: 25px;
+    }
+    
+    .input-field {
+        padding: 12px;
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem;
+        gap: 8px;
+    }
+    
+    .login-container {
+        width: 350px;
+        max-width: 95%;
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+    
+    .label-field {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 6px;
+    }
+    
+    .input-field {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        margin: 3px 0 8px 0;
+        border-radius: 8px;
+    }
+    
+    .btn {
+        padding: 14px;
+        font-size: 1rem;
+        border-radius: 8px;
+        margin-top: 5px;
+    }
+    
+    /* Form spacing adjustments */
+    .login-container > div {
+        margin-top: 1rem !important;
+    }
+    
+    /* Link styling */
+    .login-container > div:last-child {
+        margin-top: 1.2rem !important;
+        text-align: center;
+    }
+    
+    .login-container a {
+        font-size: 0.9rem;
+        text-decoration: none;
+        color: #333;
+        display: inline-block;
+        padding: 5px;
+    }
+    
+    .login-container a:hover {
+        color: #ff7e5f;
+        text-decoration: underline;
+    }
+    
+    /* Error message styling */
+    .login-container div[style*="color:red"] {
+        padding: 1rem !important;
+        background-color: #ffebee;
+        border: 1px solid #ffcdd2;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+    .container {
+        padding: 0.3rem;
+        height: 100vh;
+        justify-content: center;
+    }
+    
+    .login-container {
+        width: 300px;
+        max-width: 98%;
+        padding: 18px;
+        gap: 10px;
+        margin: 0 auto;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+    
+    .label-field {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+    
+    .input-field {
+        padding: 10px;
+        font-size: 0.9rem;
+        margin: 2px 0 6px 0;
+    }
+    
+    .btn {
+        padding: 12px;
+        font-size: 0.9rem;
+        margin-top: 3px;
+    }
+    
+    .login-container > div {
+        margin-top: 0.8rem !important;
+    }
+    
+    .login-container > div:last-child {
+        margin-top: 1rem !important;
+    }
+    
+    .login-container a {
+        font-size: 0.8rem;
+    }
+    
+    .login-container div[style*="color:red"] {
+        padding: 0.8rem !important;
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+    .container {
+        padding: 0.2rem;
+    }
+    
+    .login-container {
+        width: 100%;
+        padding: 15px;
+        gap: 8px;
+        border-radius: 8px;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 6px;
+    }
+    
+    .label-field {
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+    }
+    
+    .input-field {
+        padding: 8px;
+        font-size: 0.8rem;
+        margin: 1px 0 4px 0;
+    }
+    
+    .btn {
+        padding: 10px;
+        font-size: 0.8rem;
+        margin-top: 2px;
+    }
+    
+    .login-container > div {
+        margin-top: 0.6rem !important;
+    }
+    
+    .login-container > div:last-child {
+        margin-top: 0.8rem !important;
+    }
+    
+    .login-container a {
+        font-size: 0.7rem;
+        padding: 3px;
+    }
+    
+    .login-container div[style*="color:red"] {
+        padding: 0.6rem !important;
+        font-size: 0.7rem;
+    }
+}

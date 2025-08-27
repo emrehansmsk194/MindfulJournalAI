@@ -1,0 +1,51 @@
+
+
+.window-container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   display: flex;
+   justify-content: center;
+   z-index: 1000;
+}
+.window-content {
+    background: white;
+     border-radius: 12px;
+     max-width: 400px;
+     max-height: 15vh;
+     width: 90%;
+     overflow: auto;
+     position: relative;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.window-content h3 {
+    text-align: center;
+    color: black;
+    margin: 0;
+    padding: 12px 0;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    padding: 12px 0;
+}
+
+.logout-btn {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background: linear-gradient(to right, #feb47b, #ff7e5f);
+}

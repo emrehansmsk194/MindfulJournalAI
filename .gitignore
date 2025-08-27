@@ -1,0 +1,14 @@
+**/appsettings.Development.json
+**/appsettings.Production.json
+**/*.env
+
+# Frontend  
+.env.local
+.env.development.local
+.env.production.local
+
+# Visual Studio
+.vs/
+bin/
+obj/
+*.user
